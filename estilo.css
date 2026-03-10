@@ -364,6 +364,7 @@ footer {
     article {
         flex-direction: column;
         align-items: center;
+
     }
 
     .servicos {
@@ -409,5 +410,10 @@ footer {
     .descri {
         width: 90%;
     }
+
+    .top p {
+        text-align: center;
+    }
+
 
 }
