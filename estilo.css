@@ -1,88 +1,92 @@
 * {
     margin: 0;
-    box-sizing: border-box;
     padding: 0;
-
-
+    box-sizing: border-box;
 }
+
+html { scroll-behavior: smooth; }
 
 body {
     font-family: "Luxurious Roman", serif;
     line-height: 1.5;
 }
 
-html {
-    scroll-behavior: smooth;
-}
 
 nav {
     display: flex;
-    width: 100%;
     justify-content: space-around;
     align-items: center;
     height: 80px;
     position: sticky;
     top: 0;
-    background-color: white;
+    background: white;
     padding: 15px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-
-
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.logo {
-    display: flex;
-    font-size: 10px;
-}
+.logo { display: flex; font-size: 10px; }
 
-.ltipo {
+.ltipo, .ltipo1 {
     padding: 3px;
     color: white;
-    background-color: rgb(18, 184, 148);
-    margin-right: 5px;
-    height: 28px;
-    width: 35px;
-    text-align: center;
+    background: rgb(18,184,148);
     border-radius: 5px;
     font-size: 19px;
 }
 
-.telefone {
+.ltipo { width: 35px; height: 28px; text-align: center; }
+.ltipo1 {
+    width: 35px;
+    height: 35px;
+    margin-top: 8px;
+    display: flex;
+}
+
+.telefone, .msg {
     height: 20px;
     width: 20px;
-    margin-top: 7px;
     margin-right: 5px;
 }
+
+.telefone { margin-top: 7px; }
 
 .numero {
     font-size: 18px;
-    margin-right: 5px;
     margin-top: 5px;
-    color: rgb(12, 146, 117);
-    ;
+    color: rgb(12,146,117);
 }
 
-.contato {
-    background-color: rgb(18, 184, 148);
+
+.contato,
+.ajuda,
+.enviar {
+    background: rgb(18,184,148);
     color: white;
-    padding: 7px;
-    border-radius: 7px;
-    width: 75px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-
     border: none;
-    outline: none;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: 0.2s;
 }
 
+.contato { width: 75px; padding: 7px; }
+.ajuda { width: 120px; padding: 8px; margin-top: 15px; }
+.enviar {
+    width: 390px;
+    height: 40px;
+    margin-top: 10px;
+    background: rgb(13,151,121);
+    border-radius: 10px;
+}
 
-.contato:active {
+.contato:active,
+.ajuda:active,
+.enviar:active {
     transform: scale(0.97);
-
 }
+
 
 section {
-    background: rgb(217, 251, 244);
+    background: rgb(217,251,244);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -90,63 +94,30 @@ section {
     justify-content: center;
 }
 
-.texto1 {
-    font-size: 50px;
-    line-height: 1.6;
+.texto1 { font-size: 50px; line-height: 1.6; }
+.texto2 { line-height: 1.6; }
 
-}
-
-
-.texto2 {
-    line-height: 1.6;
-
-}
-
-
-.ajuda {
-    background-color: rgb(18, 184, 148);
-    color: white;
-    padding: 8px;
-    border-radius: 7px;
-    width: 120px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    border: none;
-    outline: none;
-    margin-top: 15px;
-
-
-}
-
-.ajuda:active {
-    transform: scale(0.97);
-
-}
 
 article {
-
     display: flex;
     min-height: 100vh;
     gap: 20px;
     justify-content: center;
 }
 
-
 .servicos {
-    border: 1px solid rgb(150, 140, 131);
-    height: 250px;
+    border: 1px solid rgb(150,140,131);
     width: 300px;
+    height: 250px;
     border-radius: 15px;
     margin: 5px;
-    text-align: center;
     padding: 30px;
-    margin-top: 30px;
-    transition: all 1s ease-in-out;
-
+    text-align: center;
+    transition: 1s;
 }
 
 .servicos:hover {
-    border: 1px solid rgb(18, 184, 148);
+    border-color: rgb(18,184,148);
     transform: scale(0.97);
 }
 
@@ -154,84 +125,47 @@ article {
     display: flex;
     flex-direction: column;
     align-items: center;
-    line-height: 1.6;
     margin-top: 40px;
+    line-height: 1.6;
 }
-
 
 article img {
     height: 70px;
     width: 70px;
-
 }
 
-.titulo {
-    font-weight: bolder;
-}
-
-.descricao {
-    font-size: 15px;
-}
-
-
-input {
-    height: 38px;
-    width: 390px;
-    margin-bottom: 7px;
-    border-radius: 10px;
-    border: 1px solid rgb(150, 140, 131);
-
-}
-
-textarea {
-    height: 110px;
-    width: 390px;
-    border-radius: 10px;
-    border: 1px solid rgb(150, 140, 131);
-}
-
-
-.enviar {
-
-    height: 40px;
-    width: 390px;
-    cursor: pointer;
-    transition: all 1s ease-in-out;
-    background-color: rgb(13, 151, 121);
-    border-radius: 10px;
-    border: none;
-    margin-top: 10px;
-    color: white;
-
-}
-
-.enviar:active {
-    transform: scale(0.97);
-}
-
-.Contato-titulos {
-    margin-bottom: 10px;
-}
-
-.ligue {
-    margin-bottom: 10px;
-    font-size: 15px;
-}
+.titulo { font-weight: bolder; }
+.descricao { font-size: 15px; }
 
 form {
-    border: 1px solid rgb(150, 140, 131);
-    height: 300px;
+    border: 1px solid rgb(150,140,131);
     max-width: 550px;
     width: 90%;
-    background-color: white;
+    height: 300px;
+    background: white;
     border-radius: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.37);
-
+    box-shadow: 0 8px 6px -6px rgba(0,0,0,0.37);
 }
+
+input,
+textarea {
+    width: 390px;
+    border-radius: 10px;
+    border: 1px solid rgb(150,140,131);
+    margin-bottom: 7px;
+}
+
+input { height: 38px; }
+textarea { height: 110px; }
+
+.Contato-titulos,
+.ligue { margin-bottom: 10px; }
+
+.ligue { font-size: 15px; }
 
 img {
     max-width: 100%;
@@ -240,135 +174,68 @@ img {
 
 
 footer {
-    background-color: rgb(21, 22, 36);
+    background: rgb(21,22,36);
     height: 250px;
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
     align-items: center;
     color: white;
 }
 
-.infor {
-    display: flex;
-    flex-direction: column;
-}
-
-.ltipo1 {
-    padding: 3px;
-    color: white;
-    background-color: rgb(18, 184, 148);
-    margin-right: 5px;
-    margin-top: 8px;
-    height: 35px;
-    width: 35px;
-    border-radius: 5px;
-    font-size: 19px;
-    display: flex;
-    flex-direction: row;
-}
-
-.contato2 h1 {
-    color: black;
-
-}
-
+.infor,
 .ctt {
     display: flex;
-    gap: 2px;
     flex-direction: column;
-
-
 }
 
+.ctt { gap: 2px; }
 
-.ctt .numero {
-    font-size: 20px;
-
-}
-
-.Atendimento {
-    height: 72px;
-    width: 218px;
-    background: rgba(255, 255, 255, 0);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    text-align: center;
-
-}
-
+.ctt .numero,
 .Atendimento .numero {
     font-size: 20px;
 }
 
-.descri {
-    width: 176px;
+.Atendimento {
+    width: 218px;
+    height: 72px;
+    border-radius: 16px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255,255,255,0.3);
+    text-align: center;
 }
 
-.top1 {
-    display: flex;
-    flex-direction: row;
-}
+.descri { width: 176px; }
 
-.email {
-    display: flex;
-    gap: 3px;
-
-
-}
-
-.msg {
-    height: 20px;
-    width: 20px;
-    margin-right: 5px;
-
-}
-
+.top1,
+.email,
 .telefonebox {
     display: flex;
-    align-items: center;
-    gap: 8px;
 }
+
+.email { gap: 3px; }
+.telefonebox { align-items: center; gap: 8px; }
+
 
 .sobre-nos {
     height: 100vh;
-    background-color: red;
     display: flex;
-    flex-direction: row;
     gap: 20px;
-    background-color: white;
-
+    background: white;
 }
 
+.img-clinica { height: 359px; }
+.sobre { width: 600px; }
 
-.img-clinica {
-    height: 359px;
-
-}
-
-.sobre {
-    width: 600px;
-}
 
 .fotos {
-    background-color: white;
     height: 100vh;
-    /* width: 100%; */
     max-width: 1200px;
     margin: 0 auto;
     position: relative;
-    /* muito importante para slides absolutos */
-    /* height: calc(100vh - 120px); */
-
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    /* background: blue */
-
 }
 
 .fotos div {
@@ -377,24 +244,14 @@ footer {
     height: 100%;
 }
 
+.fotos img { height: 70%; }
 
-
-
-.fotos img {
-    height: 70%;
-}
-
-.item {
-    display: none;
-}
-
+.item { display: none; }
 .item-ativo {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
-
 
 @media (max-width:768px) {
 
@@ -405,45 +262,25 @@ footer {
         text-align: center;
     }
 
-    .logo {
-        justify-content: center;
-    }
+    .logo { justify-content: center; }
 
     section {
         padding: 20px;
         text-align: center;
     }
 
-    .texto1 {
-        font-size: 32px;
-    }
-
-    .texto2 {
-        font-size: 16px;
-    }
+    .texto1 { font-size: 32px; }
+    .texto2 { font-size: 16px; }
 
     article {
         flex-direction: column;
         align-items: center;
-
     }
 
-    .servicos {
-        width: 90%;
-    }
-
-    form {
-        width: 90%;
-    }
-
-    input {
-        width: 90%;
-    }
-
-    textarea {
-        width: 90%;
-    }
-
+    .servicos,
+    form,
+    input,
+    textarea,
     .enviar {
         width: 90%;
     }
@@ -456,1484 +293,28 @@ footer {
         text-align: center;
     }
 
-    .ctt {
-        align-items: center;
-    }
+    .ctt,
+    .infor { align-items: center; }
 
-    .infor {
-        align-items: center;
-    }
+    .top1 { justify-content: center; }
 
-    .top1 {
-        justify-content: center;
-    }
+    .descri { width: 90%; }
 
-    .descri {
-        width: 90%;
-    }
+    .top p { text-align: center; }
 
-    .top p {
+    .sobre-nos {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
         text-align: center;
     }
 
-    * {
-        margin: 0;
-        box-sizing: border-box;
-        padding: 0;
-
-
-    }
-
-    body {
-        font-family: "Luxurious Roman", serif;
-        line-height: 1.5;
-    }
-
-    html {
-        scroll-behavior: smooth;
-    }
-
-    nav {
-        display: flex;
+    .img-clinica {
         width: 100%;
-        justify-content: space-around;
-        align-items: center;
-        height: 80px;
-        position: sticky;
-        top: 0;
-        background-color: white;
-        padding: 15px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-
-
-    }
-
-    .logo {
-        display: flex;
-        font-size: 10px;
-    }
-
-    .ltipo {
-        padding: 3px;
-        color: white;
-        background-color: rgb(18, 184, 148);
-        margin-right: 5px;
-        height: 28px;
-        width: 35px;
-        text-align: center;
-        border-radius: 5px;
-        font-size: 19px;
-    }
-
-    .telefone {
-        height: 20px;
-        width: 20px;
-        margin-top: 7px;
-        margin-right: 5px;
-    }
-
-    .numero {
-        font-size: 18px;
-        margin-right: 5px;
-        margin-top: 5px;
-        color: rgb(12, 146, 117);
-        ;
-    }
-
-    .contato {
-        background-color: rgb(18, 184, 148);
-        color: white;
-        padding: 7px;
-        border-radius: 7px;
-        width: 75px;
-        cursor: pointer;
-        transition: all 0.2s ease;
-
-        border: none;
-        outline: none;
-    }
-
-
-    .contato:active {
-        transform: scale(0.97);
-
-    }
-
-    section {
-        background: rgb(217, 251, 244);
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .texto1 {
-        font-size: 50px;
-        line-height: 1.6;
-
-    }
-
-
-    .texto2 {
-        line-height: 1.6;
-
-    }
-
-
-    .ajuda {
-        background-color: rgb(18, 184, 148);
-        color: white;
-        padding: 8px;
-        border-radius: 7px;
-        width: 120px;
-        cursor: pointer;
-        transition: all 0.2s ease;
-        border: none;
-        outline: none;
-        margin-top: 15px;
-
-
-    }
-
-    .ajuda:active {
-        transform: scale(0.97);
-
-    }
-
-    article {
-
-        display: flex;
-        min-height: 100vh;
-        gap: 20px;
-        justify-content: center;
-    }
-
-
-    .servicos {
-        border: 1px solid rgb(150, 140, 131);
-        height: 250px;
-        width: 300px;
-        border-radius: 15px;
-        margin: 5px;
-        text-align: center;
-        padding: 30px;
-        margin-top: 30px;
-        transition: all 1s ease-in-out;
-
-    }
-
-    .servicos:hover {
-        border: 1px solid rgb(18, 184, 148);
-        transform: scale(0.97);
-    }
-
-    .top {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        line-height: 1.6;
-        margin-top: 40px;
-    }
-
-
-    article img {
-        height: 70px;
-        width: 70px;
-
-    }
-
-    .titulo {
-        font-weight: bolder;
-    }
-
-    .descricao {
-        font-size: 15px;
-    }
-
-
-    input {
-        height: 38px;
-        width: 390px;
-        margin-bottom: 7px;
-        border-radius: 10px;
-        border: 1px solid rgb(150, 140, 131);
-
-    }
-
-    textarea {
-        height: 110px;
-        width: 390px;
-        border-radius: 10px;
-        border: 1px solid rgb(150, 140, 131);
-    }
-
-
-    .enviar {
-
-        height: 40px;
-        width: 390px;
-        cursor: pointer;
-        transition: all 1s ease-in-out;
-        background-color: rgb(13, 151, 121);
-        border-radius: 10px;
-        border: none;
-        margin-top: 10px;
-        color: white;
-
-    }
-
-    .enviar:active {
-        transform: scale(0.97);
-    }
-
-    .Contato-titulos {
-        margin-bottom: 10px;
-    }
-
-    .ligue {
-        margin-bottom: 10px;
-        font-size: 15px;
-    }
-
-    form {
-        border: 1px solid rgb(150, 140, 131);
-        height: 300px;
-        max-width: 550px;
-        width: 90%;
-        background-color: white;
-        border-radius: 15px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.37);
-
-    }
-
-    img {
-        max-width: 100%;
         height: auto;
     }
 
-
-    footer {
-        background-color: rgb(21, 22, 36);
-        height: 250px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        color: white;
-    }
-
-    .infor {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .ltipo1 {
-        padding: 3px;
-        color: white;
-        background-color: rgb(18, 184, 148);
-        margin-right: 5px;
-        margin-top: 8px;
-        height: 35px;
-        width: 35px;
-        border-radius: 5px;
-        font-size: 19px;
-        display: flex;
-        flex-direction: row;
-    }
-
-    .contato2 h1 {
-        color: black;
-
-    }
-
-    .ctt {
-        display: flex;
-        gap: 2px;
-        flex-direction: column;
-
-
-    }
-
-
-    .ctt .numero {
-        font-size: 20px;
-
-    }
-
-    .Atendimento {
-        height: 72px;
-        width: 218px;
-        background: rgba(255, 255, 255, 0);
-        border-radius: 16px;
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(5px);
-        -webkit-backdrop-filter: blur(5px);
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        text-align: center;
-
-    }
-
-    .Atendimento .numero {
-        font-size: 20px;
-    }
-
-    .descri {
-        width: 176px;
-    }
-
-    .top1 {
-        display: flex;
-        flex-direction: row;
-    }
-
-    .email {
-        display: flex;
-        gap: 3px;
-
-
-    }
-
-    .msg {
-        height: 20px;
-        width: 20px;
-        margin-right: 5px;
-
-    }
-
-    .telefonebox {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-    }
-
-    .sobre-nos {
-        height: 100vh;
-        background-color: red;
-        display: flex;
-        flex-direction: row;
-        gap: 20px;
-        background-color: white;
-
-    }
-
-
-    .img-clinica {
-        height: 359px;
-
-    }
-
-    .sobre {
-        width: 600px;
-    }
-
-    .fotos {
-        background-color: white;
-        height: 100vh;
-        /* width: 100%; */
-        max-width: 1200px;
-        margin: 0 auto;
-        position: relative;
-        /* muito importante para slides absolutos */
-        /* height: calc(100vh - 120px); */
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-        /* background: blue */
-
-    }
-
-    .fotos div {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-    }
-
-
-
-
-    .fotos img {
-        height: 70%;
-    }
-
-    .item {
-        display: none;
-    }
-
-    .item-ativo {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-
-
-    @media (max-width:768px) {
-
-        nav {
-            flex-direction: column;
-            height: auto;
-            gap: 10px;
-            text-align: center;
-        }
-
-        .logo {
-            justify-content: center;
-        }
-
-        section {
-            padding: 20px;
-            text-align: center;
-        }
-
-        .texto1 {
-            font-size: 32px;
-        }
-
-        .texto2 {
-            font-size: 16px;
-        }
-
-        article {
-            flex-direction: column;
-            align-items: center;
-
-        }
-
-        .servicos {
-            width: 90%;
-        }
-
-        form {
-            width: 90%;
-        }
-
-        input {
-            width: 90%;
-        }
-
-        textarea {
-            width: 90%;
-        }
-
-        .enviar {
-            width: 90%;
-        }
-
-        footer {
-            flex-direction: column;
-            height: auto;
-            gap: 30px;
-            padding: 30px;
-            text-align: center;
-        }
-
-        .ctt {
-            align-items: center;
-        }
-
-        .infor {
-            align-items: center;
-        }
-
-        .top1 {
-            justify-content: center;
-        }
-
-        .descri {
-            width: 90%;
-        }
-
-        .top p {
-            text-align: center;
-        }
-
-
-    }
-
-    * {
-        margin: 0;
-        box-sizing: border-box;
-        padding: 0;
-
-
-    }
-
-    body {
-        font-family: "Luxurious Roman", serif;
-        line-height: 1.5;
-    }
-
-    html {
-        scroll-behavior: smooth;
-    }
-
-    nav {
-        display: flex;
-        width: 100%;
-        justify-content: space-around;
-        align-items: center;
-        height: 80px;
-        position: sticky;
-        top: 0;
-        background-color: white;
-        padding: 15px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-
-
-    }
-
-    .logo {
-        display: flex;
-        font-size: 10px;
-    }
-
-    .ltipo {
-        padding: 3px;
-        color: white;
-        background-color: rgb(18, 184, 148);
-        margin-right: 5px;
-        height: 28px;
-        width: 35px;
-        text-align: center;
-        border-radius: 5px;
-        font-size: 19px;
-    }
-
-    .telefone {
-        height: 20px;
-        width: 20px;
-        margin-top: 7px;
-        margin-right: 5px;
-    }
-
-    .numero {
-        font-size: 18px;
-        margin-right: 5px;
-        margin-top: 5px;
-        color: rgb(12, 146, 117);
-        ;
-    }
-
-    .contato {
-        background-color: rgb(18, 184, 148);
-        color: white;
-        padding: 7px;
-        border-radius: 7px;
-        width: 75px;
-        cursor: pointer;
-        transition: all 0.2s ease;
-
-        border: none;
-        outline: none;
-    }
-
-
-    .contato:active {
-        transform: scale(0.97);
-
-    }
-
-    section {
-        background: rgb(217, 251, 244);
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .texto1 {
-        font-size: 50px;
-        line-height: 1.6;
-
-    }
-
-
-    .texto2 {
-        line-height: 1.6;
-
-    }
-
-
-    .ajuda {
-        background-color: rgb(18, 184, 148);
-        color: white;
-        padding: 8px;
-        border-radius: 7px;
-        width: 120px;
-        cursor: pointer;
-        transition: all 0.2s ease;
-        border: none;
-        outline: none;
-        margin-top: 15px;
-
-
-    }
-
-    .ajuda:active {
-        transform: scale(0.97);
-
-    }
-
-    article {
-
-        display: flex;
-        min-height: 100vh;
-        gap: 20px;
-        justify-content: center;
-    }
-
-
-    .servicos {
-        border: 1px solid rgb(150, 140, 131);
-        height: 250px;
-        width: 300px;
-        border-radius: 15px;
-        margin: 5px;
-        text-align: center;
-        padding: 30px;
-        margin-top: 30px;
-        transition: all 1s ease-in-out;
-
-    }
-
-    .servicos:hover {
-        border: 1px solid rgb(18, 184, 148);
-        transform: scale(0.97);
-    }
-
-    .top {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        line-height: 1.6;
-        margin-top: 40px;
-    }
-
-
-    article img {
-        height: 70px;
-        width: 70px;
-
-    }
-
-    .titulo {
-        font-weight: bolder;
-    }
-
-    .descricao {
-        font-size: 15px;
-    }
-
-
-    input {
-        height: 38px;
-        width: 390px;
-        margin-bottom: 7px;
-        border-radius: 10px;
-        border: 1px solid rgb(150, 140, 131);
-
-    }
-
-    textarea {
-        height: 110px;
-        width: 390px;
-        border-radius: 10px;
-        border: 1px solid rgb(150, 140, 131);
-    }
-
-
-    .enviar {
-
-        height: 40px;
-        width: 390px;
-        cursor: pointer;
-        transition: all 1s ease-in-out;
-        background-color: rgb(13, 151, 121);
-        border-radius: 10px;
-        border: none;
-        margin-top: 10px;
-        color: white;
-
-    }
-
-    .enviar:active {
-        transform: scale(0.97);
-    }
-
-    .Contato-titulos {
-        margin-bottom: 10px;
-    }
-
-    .ligue {
-        margin-bottom: 10px;
-        font-size: 15px;
-    }
-
-    form {
-        border: 1px solid rgb(150, 140, 131);
-        height: 300px;
-        max-width: 550px;
-        width: 90%;
-        background-color: white;
-        border-radius: 15px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.37);
-
-    }
-
-    img {
-        max-width: 100%;
-        height: auto;
-    }
-
-
-    footer {
-        background-color: rgb(21, 22, 36);
-        height: 250px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        color: white;
-    }
-
-    .infor {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .ltipo1 {
-        padding: 3px;
-        color: white;
-        background-color: rgb(18, 184, 148);
-        margin-right: 5px;
-        margin-top: 8px;
-        height: 35px;
-        width: 35px;
-        border-radius: 5px;
-        font-size: 19px;
-        display: flex;
-        flex-direction: row;
-    }
-
-    .contato2 h1 {
-        color: black;
-
-    }
-
-    .ctt {
-        display: flex;
-        gap: 2px;
-        flex-direction: column;
-
-
-    }
-
-
-    .ctt .numero {
-        font-size: 20px;
-
-    }
-
-    .Atendimento {
-        height: 72px;
-        width: 218px;
-        background: rgba(255, 255, 255, 0);
-        border-radius: 16px;
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(5px);
-        -webkit-backdrop-filter: blur(5px);
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        text-align: center;
-
-    }
-
-    .Atendimento .numero {
-        font-size: 20px;
-    }
-
-    .descri {
-        width: 176px;
-    }
-
-    .top1 {
-        display: flex;
-        flex-direction: row;
-    }
-
-    .email {
-        display: flex;
-        gap: 3px;
-
-
-    }
-
-    .msg {
-        height: 20px;
-        width: 20px;
-        margin-right: 5px;
-
-    }
-
-    .telefonebox {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-    }
-
-    .sobre-nos {
-        height: 100vh;
-        background-color: red;
-        display: flex;
-        flex-direction: row;
-        gap: 20px;
-        background-color: white;
-
-    }
-
-
-    .img-clinica {
-        height: 359px;
-
-    }
-
-    .sobre {
-        width: 600px;
-    }
-
-    .fotos {
-        background-color: white;
-        height: 100vh;
-        /* width: 100%; */
-        max-width: 1200px;
-        margin: 0 auto;
-        position: relative;
-        /* muito importante para slides absolutos */
-        /* height: calc(100vh - 120px); */
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-        /* background: blue */
-
-    }
-
-    .fotos div {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-    }
-
-
-
-
-    .fotos img {
-        height: 70%;
-    }
-
-    .item {
-        display: none;
-    }
-
-    .item-ativo {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-
-
-    @media (max-width:768px) {
-
-        nav {
-            flex-direction: column;
-            height: auto;
-            gap: 10px;
-            text-align: center;
-        }
-
-        .logo {
-            justify-content: center;
-        }
-
-        section {
-            padding: 20px;
-            text-align: center;
-        }
-
-        .texto1 {
-            font-size: 32px;
-        }
-
-        .texto2 {
-            font-size: 16px;
-        }
-
-        article {
-            flex-direction: column;
-            align-items: center;
-
-        }
-
-        .servicos {
-            width: 90%;
-        }
-
-        form {
-            width: 90%;
-        }
-
-        input {
-            width: 90%;
-        }
-
-        textarea {
-            width: 90%;
-        }
-
-        .enviar {
-            width: 90%;
-        }
-
-        footer {
-            flex-direction: column;
-            height: auto;
-            gap: 30px;
-            padding: 30px;
-            text-align: center;
-        }
-
-        .ctt {
-            align-items: center;
-        }
-
-        .infor {
-            align-items: center;
-        }
-
-        .top1 {
-            justify-content: center;
-        }
-
-        .descri {
-            width: 90%;
-        }
-
-        .top p {
-            text-align: center;
-        }
-
-
-    }
-
-    * {
-        margin: 0;
-        box-sizing: border-box;
-        padding: 0;
-
-
-    }
-
-    body {
-        font-family: "Luxurious Roman", serif;
-        line-height: 1.5;
-    }
-
-    html {
-        scroll-behavior: smooth;
-    }
-
-    nav {
-        display: flex;
-        width: 100%;
-        justify-content: space-around;
-        align-items: center;
-        height: 80px;
-        position: sticky;
-        top: 0;
-        background-color: white;
-        padding: 15px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-
-
-    }
-
-    .logo {
-        display: flex;
-        font-size: 10px;
-    }
-
-    .ltipo {
-        padding: 3px;
-        color: white;
-        background-color: rgb(18, 184, 148);
-        margin-right: 5px;
-        height: 28px;
-        width: 35px;
-        text-align: center;
-        border-radius: 5px;
-        font-size: 19px;
-    }
-
-    .telefone {
-        height: 20px;
-        width: 20px;
-        margin-top: 7px;
-        margin-right: 5px;
-    }
-
-    .numero {
-        font-size: 18px;
-        margin-right: 5px;
-        margin-top: 5px;
-        color: rgb(12, 146, 117);
-        ;
-    }
-
-    .contato {
-        background-color: rgb(18, 184, 148);
-        color: white;
-        padding: 7px;
-        border-radius: 7px;
-        width: 75px;
-        cursor: pointer;
-        transition: all 0.2s ease;
-
-        border: none;
-        outline: none;
-    }
-
-
-    .contato:active {
-        transform: scale(0.97);
-
-    }
-
-    section {
-        background: rgb(217, 251, 244);
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .texto1 {
-        font-size: 50px;
-        line-height: 1.6;
-
-    }
-
-
-    .texto2 {
-        line-height: 1.6;
-
-    }
-
-
-    .ajuda {
-        background-color: rgb(18, 184, 148);
-        color: white;
-        padding: 8px;
-        border-radius: 7px;
-        width: 120px;
-        cursor: pointer;
-        transition: all 0.2s ease;
-        border: none;
-        outline: none;
-        margin-top: 15px;
-
-
-    }
-
-    .ajuda:active {
-        transform: scale(0.97);
-
-    }
-
-    article {
-
-        display: flex;
-        min-height: 100vh;
-        gap: 20px;
-        justify-content: center;
-    }
-
-
-    .servicos {
-        border: 1px solid rgb(150, 140, 131);
-        height: 250px;
-        width: 300px;
-        border-radius: 15px;
-        margin: 5px;
-        text-align: center;
-        padding: 30px;
-        margin-top: 30px;
-        transition: all 1s ease-in-out;
-
-    }
-
-    .servicos:hover {
-        border: 1px solid rgb(18, 184, 148);
-        transform: scale(0.97);
-    }
-
-    .top {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        line-height: 1.6;
-        margin-top: 40px;
-    }
-
-
-    article img {
-        height: 70px;
-        width: 70px;
-
-    }
-
-    .titulo {
-        font-weight: bolder;
-    }
-
-    .descricao {
-        font-size: 15px;
-    }
-
-
-    input {
-        height: 38px;
-        width: 390px;
-        margin-bottom: 7px;
-        border-radius: 10px;
-        border: 1px solid rgb(150, 140, 131);
-
-    }
-
-    textarea {
-        height: 110px;
-        width: 390px;
-        border-radius: 10px;
-        border: 1px solid rgb(150, 140, 131);
-    }
-
-
-    .enviar {
-
-        height: 40px;
-        width: 390px;
-        cursor: pointer;
-        transition: all 1s ease-in-out;
-        background-color: rgb(13, 151, 121);
-        border-radius: 10px;
-        border: none;
-        margin-top: 10px;
-        color: white;
-
-    }
-
-    .enviar:active {
-        transform: scale(0.97);
-    }
-
-    .Contato-titulos {
-        margin-bottom: 10px;
-    }
-
-    .ligue {
-        margin-bottom: 10px;
-        font-size: 15px;
-    }
-
-    form {
-        border: 1px solid rgb(150, 140, 131);
-        height: 300px;
-        max-width: 550px;
-        width: 90%;
-        background-color: white;
-        border-radius: 15px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.37);
-
-    }
-
-    img {
-        max-width: 100%;
-        height: auto;
-    }
-
-
-    footer {
-        background-color: rgb(21, 22, 36);
-        height: 250px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        color: white;
-    }
-
-    .infor {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .ltipo1 {
-        padding: 3px;
-        color: white;
-        background-color: rgb(18, 184, 148);
-        margin-right: 5px;
-        margin-top: 8px;
-        height: 35px;
-        width: 35px;
-        border-radius: 5px;
-        font-size: 19px;
-        display: flex;
-        flex-direction: row;
-    }
-
-    .contato2 h1 {
-        color: black;
-
-    }
-
-    .ctt {
-        display: flex;
-        gap: 2px;
-        flex-direction: column;
-
-
-    }
-
-
-    .ctt .numero {
-        font-size: 20px;
-
-    }
-
-    .Atendimento {
-        height: 72px;
-        width: 218px;
-        background: rgba(255, 255, 255, 0);
-        border-radius: 16px;
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(5px);
-        -webkit-backdrop-filter: blur(5px);
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        text-align: center;
-
-    }
-
-    .Atendimento .numero {
-        font-size: 20px;
-    }
-
-    .descri {
-        width: 176px;
-    }
-
-    .top1 {
-        display: flex;
-        flex-direction: row;
-    }
-
-    .email {
-        display: flex;
-        gap: 3px;
-
-
-    }
-
-    .msg {
-        height: 20px;
-        width: 20px;
-        margin-right: 5px;
-
-    }
-
-    .telefonebox {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-    }
-
-    .sobre-nos {
-        height: 100vh;
-        background-color: red;
-        display: flex;
-        flex-direction: row;
-        gap: 20px;
-        background-color: white;
-
-    }
-
-
-    .img-clinica {
-        height: 359px;
-
-    }
-
-    .sobre {
-        width: 600px;
-    }
-
-    .fotos {
-        background-color: white;
-        height: 100vh;
-        /* width: 100%; */
-        max-width: 1200px;
-        margin: 0 auto;
-        position: relative;
-        /* muito importante para slides absolutos */
-        /* height: calc(100vh - 120px); */
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-        /* background: blue */
-
-    }
-
-    .fotos div {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-    }
-
-
-
-
-    .fotos img {
-        height: 70%;
-    }
-
-    .item {
-        display: none;
-    }
-
-    .item-ativo {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-
-
-    @media (max-width:768px) {
-
-        nav {
-            flex-direction: column;
-            height: auto;
-            gap: 10px;
-            text-align: center;
-        }
-
-        .logo {
-            justify-content: center;
-        }
-
-        section {
-            padding: 20px;
-            text-align: center;
-        }
-
-        .texto1 {
-            font-size: 32px;
-        }
-
-        .texto2 {
-            font-size: 16px;
-        }
-
-        article {
-            flex-direction: column;
-            align-items: center;
-
-        }
-
-        .servicos {
-            width: 90%;
-        }
-
-        form {
-            width: 90%;
-        }
-
-        input {
-            width: 90%;
-        }
-
-        textarea {
-            width: 90%;
-        }
-
-        .enviar {
-            width: 90%;
-        }
-
-        footer {
-            flex-direction: column;
-            height: auto;
-            gap: 30px;
-            padding: 30px;
-            text-align: center;
-        }
-
-        .ctt {
-            align-items: center;
-        }
-
-        .infor {
-            align-items: center;
-        }
-
-        .top1 {
-            justify-content: center;
-        }
-
-        .descri {
-            width: 90%;
-        }
-
-        .top p {
-            text-align: center;
-        }
-
-        .sobre-nos {
-            flex-direction: column;
-            height: auto;
-            padding: 20px;
-            gap: 20px;
-            text-align: center;
-        }
-
-        .img-clinica {
-            width: 100%;
-            height: auto;
-        }
-
-        .sobre {
-            width: 100%;
-        }
-
-    }
-
-
+    .sobre { width: 100%; }
 }
+
+
