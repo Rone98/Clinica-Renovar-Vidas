@@ -248,7 +248,7 @@ footer {
     height: 100%;
 }
 
-.fotos img { height: 80%; }
+.fotos img { height: 60%; }
 
 .item { display: none; }
 .item-ativo {
