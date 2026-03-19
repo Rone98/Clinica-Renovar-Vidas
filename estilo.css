@@ -32,6 +32,7 @@ nav {
     background: rgb(18,184,148);
     border-radius: 5px;
     font-size: 19px;
+    margin-right: 6px;
 }
 
 .ltipo { width: 35px; height: 28px; text-align: center; }
@@ -66,6 +67,7 @@ nav {
     border-radius: 7px;
     cursor: pointer;
     transition: 0.2s;
+    margin-left: 5px;
 }
 
 .contato { width: 75px; padding: 7px; }
@@ -219,6 +221,7 @@ footer {
 .sobre-nos {
     height: 100vh;
     display: flex;
+    flex-direction: row;
     gap: 20px;
     background: white;
 }
@@ -236,6 +239,7 @@ footer {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    background-color: white;
 }
 
 .fotos div {
@@ -244,7 +248,7 @@ footer {
     height: 100%;
 }
 
-.fotos img { height: 70%; }
+.fotos img { height: 80%; }
 
 .item { display: none; }
 .item-ativo {
