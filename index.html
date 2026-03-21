@@ -7,14 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apoio Emocional e Atendimento 24h em Brasília DF | Renovar Vidas</title>
     
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18029486789"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-18029486789');
-</script>
+    <!-- Google Tag -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18029486789"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-18029486789');
+    </script>
 
     <meta name="description"
         content="Atendimento humanizado com suporte emocional, equipe especializada e acompanhamento 24 horas em Brasília DF.">
@@ -39,10 +39,13 @@
         <div class="logo">
             <img class="telefone" src="./assets/icons8-telefone-96.png" alt="">
             <p class="numero">(61) 98159-2670</p>
+
             <a href="https://api.whatsapp.com/send?phone=5561981592670&text=Olá%20gostaria%20de%20informações"
-                target="_blank">
+            onclick="gtag_report_conversion('https://api.whatsapp.com/send?phone=5561981592670&text=Olá%20gostaria%20de%20informações');"
+            target="_blank">
                 <button class="contato">Contato</button>
             </a>
+
         </div>
     </nav>
 
@@ -54,9 +57,11 @@
             </p>
 
             <a href="https://api.whatsapp.com/send?phone=5561981592670&text=Olá%20gostaria%20de%20informações"
-                target="_blank">
+            onclick="gtag_report_conversion('https://api.whatsapp.com/send?phone=5561981592670&text=Olá%20gostaria%20de%20informações');"
+            target="_blank">
                 <button class="ajuda">Falar com um especialista</button>
             </a>
+
         </section>
     </main>
 
@@ -69,7 +74,6 @@
 
         <div class="servicos">
             <img src="./assets/icons8-hospital-3-80.png" alt="Atendimento 24h">
-
             <p class="titulo">Acompanhamento Especializado</p>
             <p class="descricao">
                 Suporte completo com equipe preparada para atender cada pessoa de forma individual e humanizada.
@@ -95,22 +99,20 @@
     </article>
 
     <section id="Contato" class="Contato">
-
         <h2 class="Contato-titulos">Fale Conosco</h2>
         <p class="ligue">Ligue para (61) 98159-2670 ou envie uma mensagem.</p>
 
-        <form class="formularios" id="formulario" onsubmit="enviarMensagem(event)">
+        <form class="formularios">
             <div class="form">
-                <input placeholder="Nome" type="text" class="campo-form" id="campo-nome" required>
+                <input placeholder="Nome" type="text" class="campo-form" required>
             </div>
 
             <div class="form">
-                <textarea placeholder="Digite sua mensagem" id="campo-mensagem" class="campo-form" required></textarea>
+                <textarea placeholder="Digite sua mensagem" class="campo-form" required></textarea>
             </div>
 
             <button class="enviar" type="submit">Enviar mensagem</button>
         </form>
-
     </section>
 
     <section class="sobre-nos">
@@ -118,30 +120,9 @@
 
         <div class="sobre">
             <h2>Sobre Nós</h2>
-
-            <p>
-                A Renovar Vidas é um espaço dedicado ao cuidado emocional, oferecendo apoio para pessoas que enfrentam momentos difíceis e buscam orientação profissional.
-            </p>
-
-            <p>
-                Contamos com uma equipe preparada para oferecer atendimento humanizado, com respeito, sigilo e atenção individualizada em cada situação.
-            </p>
-
-            <p>
-                Nosso objetivo é proporcionar acolhimento, suporte contínuo e orientação tanto para a pessoa quanto para sua família, promovendo equilíbrio e qualidade de vida.
-            </p>
-
-            <p>
-                Acreditamos que todos merecem apoio, compreensão e a oportunidade de recomeçar com segurança e dignidade.
-            </p>
-
-        </div>
-
-    </section>
-
-    <section class="fotos">
-        <div class="item-ativo">
-            <img src="assets/d716e818-8408-4752-8582-f82c7424d04d.jpg" alt="">
+            <p>A Renovar Vidas é um espaço dedicado ao cuidado emocional, oferecendo apoio para pessoas que enfrentam momentos difíceis e buscam orientação profissional.</p>
+            <p>Contamos com uma equipe preparada para oferecer atendimento humanizado, com respeito, sigilo e atenção individualizada em cada situação.</p>
+            <p>Nosso objetivo é proporcionar acolhimento, suporte contínuo e orientação tanto para a pessoa quanto para sua família.</p>
         </div>
     </section>
 
@@ -152,25 +133,7 @@
                 <h2 class="ltipo1">RV</h2>
                 <h1>Renovar Vidas</h1>
             </div>
-
-            <p class="descri">
-                Espaço dedicado ao acolhimento, apoio emocional e cuidado com bem-estar.
-            </p>
-        </div>
-
-        <div class="contato2">
-            <h2>Contato</h2>
-
-            <div class="ctt">
-                <div class="telefonebox">
-                    <img class="telefone" src="./assets/icons8-telefone-96.png" alt="">
-                    <p class="numero">(61) 98159-2670</p>
-                </div>
-                <div class="email">
-                    <img class="msg" src="assets/aplicativo-de-caixa-de-entrada-de-correio.png" alt="">
-                    <p>renovarvidas1@gmail.com</p>
-                </div>
-            </div>
+            <p class="descri">Espaço dedicado ao acolhimento e apoio emocional.</p>
         </div>
 
         <div class="Atendimento">
@@ -178,15 +141,10 @@
             <p class="numero">(61) 98159-2670</p>
         </div>
 
-        <div class="endereco">
-            <img src="assets/icons8-marcador-48.png" alt="">
-            <p>Brasília - DF</p>
-        </div>
-
     </footer>
 
+    
+    
+
 </body>
-
-<script src="script.js"></script>
-
 </html>
