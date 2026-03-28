@@ -15,6 +15,20 @@
       gtag('js', new Date());
       gtag('config', 'AW-18029486789');
     </script>
+    <script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+    'send_to': 'AW-18029486789/XXu-CL6mjY0cEMXFkJVD',
+    'event_callback': callback
+  });
+  return false;
+}
+</script>
 
     <meta name="description"
         content="Atendimento humanizado com suporte emocional, equipe especializada e acompanhamento 24 horas em Brasília DF.">
