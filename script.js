@@ -5,12 +5,12 @@ function enviarMensagem(event) {
     const mensagem = document.getElementById('campo-mensagem').value
     const telefone = '5561981592670'
 
-    const texto = `Olá me chamo ${nome}, venho do site ${mensagem}`
+    const texto = `Olá me chamo ${nome}, venho do site do google,gostaria de informações e orçamento  ${mensagem}`
     const mformatada = encodeURIComponent(texto)
 
     const url = `https://api.whatsapp.com/send?phone=${telefone}&text=${mformatada}`
 
-    
+
     gtag_report_conversion(url)
 }
 
@@ -41,16 +41,15 @@ setInterval(() => {
 
 
 
-    function gtag_report_conversion(url) {
-      var callback = function () {
-        if (typeof(url) != 'undefined') {
-          window.location = url;
+function gtag_report_conversion(url) {
+    var callback = function () {
+        if (typeof (url) != 'undefined') {
+            window.location = url;
         }
-      };
-      gtag('event', 'conversion', {
-          'send_to': 'AW-18029486789/SEU_CODIGO_AQUI',
-          'event_callback': callback
-      });
-      return false;
-    }
-    
+    };
+    gtag('event', 'conversion', {
+        'send_to': 'AW-18029486789/SEU_CODIGO_AQUI',
+        'event_callback': callback
+    });
+    return false;
+}
