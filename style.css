@@ -4,7 +4,9 @@
     box-sizing: border-box;
 }
 
-html { scroll-behavior: smooth; }
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     font-family: "Luxurious Roman", serif;
@@ -21,21 +23,30 @@ nav {
     top: 0;
     background: white;
     padding: 15px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.logo { display: flex; font-size: 10px; }
+.logo {
+    display: flex;
+    font-size: 10px;
+}
 
-.ltipo, .ltipo1 {
+.ltipo,
+.ltipo1 {
     padding: 3px;
     color: white;
-    background: rgb(18,184,148);
+    background: rgb(18, 184, 148);
     border-radius: 5px;
     font-size: 19px;
     margin-right: 6px;
 }
 
-.ltipo { width: 35px; height: 28px; text-align: center; }
+.ltipo {
+    width: 35px;
+    height: 28px;
+    text-align: center;
+}
+
 .ltipo1 {
     width: 35px;
     height: 35px;
@@ -43,25 +54,28 @@ nav {
     display: flex;
 }
 
-.telefone, .msg {
+.telefone,
+.msg {
     height: 20px;
     width: 20px;
     margin-right: 5px;
 }
 
-.telefone { margin-top: 7px; }
+.telefone {
+    margin-top: 7px;
+}
 
 .numero {
     font-size: 18px;
     margin-top: 5px;
-    color: rgb(12,146,117);
+    color: rgb(12, 146, 117);
 }
 
 
 .contato,
 .ajuda,
 .enviar {
-    background: rgb(18,184,148);
+    background: rgb(18, 184, 148);
     color: white;
     border: none;
     border-radius: 7px;
@@ -70,14 +84,25 @@ nav {
     margin-left: 5px;
 }
 
-.contato { width: 75px; padding: 7px; }
-.ajuda { width: 120px; padding: 8px; margin-top: 15px; }
+.contato {
+    width: 75px;
+    padding: 7px;
+}
+
+.ajuda {
+    width: 130px;
+    padding: 8px;
+    margin-top: 15px;
+    font-size: 18px;
+}
+
 .enviar {
     width: 390px;
     height: 40px;
     margin-top: 10px;
-    background: rgb(13,151,121);
+    background: rgb(13, 151, 121);
     border-radius: 10px;
+
 }
 
 .contato:active,
@@ -88,7 +113,7 @@ nav {
 
 
 section {
-    background: rgb(217,251,244);
+    background: rgb(217, 251, 244);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -96,8 +121,14 @@ section {
     justify-content: center;
 }
 
-.texto1 { font-size: 50px; line-height: 1.6; }
-.texto2 { line-height: 1.6; }
+.texto1 {
+    font-size: 50px;
+    line-height: 1.6;
+}
+
+.texto2 {
+    line-height: 1.6;
+}
 
 
 article {
@@ -108,7 +139,7 @@ article {
 }
 
 .servicos {
-    border: 1px solid rgb(150,140,131);
+    border: 1px solid rgb(150, 140, 131);
     width: 300px;
     height: 250px;
     border-radius: 15px;
@@ -119,7 +150,7 @@ article {
 }
 
 .servicos:hover {
-    border-color: rgb(18,184,148);
+    border-color: rgb(18, 184, 148);
     transform: scale(0.97);
 }
 
@@ -136,11 +167,16 @@ article img {
     width: 70px;
 }
 
-.titulo { font-weight: bolder; }
-.descricao { font-size: 15px; }
+.titulo {
+    font-weight: bolder;
+}
+
+.descricao {
+    font-size: 15px;
+}
 
 form {
-    border: 1px solid rgb(150,140,131);
+    border: 1px solid rgb(150, 140, 131);
     max-width: 550px;
     width: 90%;
     height: 300px;
@@ -150,24 +186,33 @@ form {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 8px 6px -6px rgba(0,0,0,0.37);
+    box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.37);
 }
 
 input,
 textarea {
     width: 390px;
     border-radius: 10px;
-    border: 1px solid rgb(150,140,131);
+    border: 1px solid rgb(150, 140, 131);
     margin-bottom: 7px;
 }
 
-input { height: 38px; }
-textarea { height: 110px; }
+input {
+    height: 38px;
+}
+
+textarea {
+    height: 110px;
+}
 
 .Contato-titulos,
-.ligue { margin-bottom: 10px; }
+.ligue {
+    margin-bottom: 10px;
+}
 
-.ligue { font-size: 15px; }
+.ligue {
+    font-size: 15px;
+}
 
 img {
     max-width: 100%;
@@ -176,7 +221,7 @@ img {
 
 
 footer {
-    background: rgb(21,22,36);
+    background: rgb(21, 22, 36);
     height: 250px;
     display: flex;
     justify-content: space-around;
@@ -190,7 +235,9 @@ footer {
     flex-direction: column;
 }
 
-.ctt { gap: 2px; }
+.ctt {
+    gap: 2px;
+}
 
 .ctt .numero,
 .Atendimento .numero {
@@ -202,11 +249,13 @@ footer {
     height: 72px;
     border-radius: 16px;
     backdrop-filter: blur(5px);
-    border: 1px solid rgba(255,255,255,0.3);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     text-align: center;
 }
 
-.descri { width: 176px; }
+.descri {
+    width: 176px;
+}
 
 .top1,
 .email,
@@ -214,8 +263,14 @@ footer {
     display: flex;
 }
 
-.email { gap: 3px; }
-.telefonebox { align-items: center; gap: 8px; }
+.email {
+    gap: 3px;
+}
+
+.telefonebox {
+    align-items: center;
+    gap: 8px;
+}
 
 
 .sobre-nos {
@@ -226,8 +281,13 @@ footer {
     background: white;
 }
 
-.img-clinica { height: 359px; }
-.sobre { width: 600px; }
+.img-clinica {
+    height: 359px;
+}
+
+.sobre {
+    width: 600px;
+}
 
 
 .fotos {
@@ -248,9 +308,14 @@ footer {
     height: 100%;
 }
 
-.fotos img { height: 60%; }
+.fotos img {
+    height: 60%;
+}
 
-.item { display: none; }
+.item {
+    display: none;
+}
+
 .item-ativo {
     display: flex;
     justify-content: center;
@@ -266,15 +331,22 @@ footer {
         text-align: center;
     }
 
-    .logo { justify-content: center; }
+    .logo {
+        justify-content: center;
+    }
 
     section {
         padding: 20px;
         text-align: center;
     }
 
-    .texto1 { font-size: 32px; }
-    .texto2 { font-size: 16px; }
+    .texto1 {
+        font-size: 32px;
+    }
+
+    .texto2 {
+        font-size: 16px;
+    }
 
     article {
         flex-direction: column;
@@ -298,13 +370,21 @@ footer {
     }
 
     .ctt,
-    .infor { align-items: center; }
+    .infor {
+        align-items: center;
+    }
 
-    .top1 { justify-content: center; }
+    .top1 {
+        justify-content: center;
+    }
 
-    .descri { width: 90%; }
+    .descri {
+        width: 90%;
+    }
 
-    .top p { text-align: center; }
+    .top p {
+        text-align: center;
+    }
 
     .sobre-nos {
         flex-direction: column;
@@ -318,7 +398,7 @@ footer {
         height: auto;
     }
 
-    .sobre { width: 100%; }
+    .sobre {
+        width: 100%;
+    }
 }
-
-
